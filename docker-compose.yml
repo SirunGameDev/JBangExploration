@@ -1,0 +1,15 @@
+services:
+  jbang:
+    #user: ${UID}:${GID}
+    build: ./docker
+    image: jbangexploration
+    restart: always
+    container_name: jbangexploration
+    volumes:
+      - ./ws/:/ws
+    #ports:
+    #expose:
+    tty: true
+    command:
+      - /bin/sh
+
